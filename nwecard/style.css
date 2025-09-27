@@ -1,0 +1,157 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* 2. Remove default margin */
+
+* {
+    margin: 0;
+}
+
+
+/* 3. Enable keyword animations */
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        font-size: var(--fs-lg);
+        interpolate-size: allow-keywords;
+        scroll-behavior: smooth;
+    }
+}
+
+body {
+    width: 100%;
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    place-content: center;
+    display: grid;
+    height: 100vh;
+    font-family: var(--ff-figtree);
+    background-color: var(--clr-yellow);
+}
+
+
+/* 6. Improve media defaults */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* 7. Inherit fonts for form controls */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* 8. Avoid text overflows */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+
+/* 9. Improve line wrapping */
+
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+@font-face {
+    font-family: "FigtTree";
+    src: url(./assets/fonts/Figtree-VariableFont_wght.ttf) format('truetype');
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+ :root {
+    /* colors */
+    --clr-yellow: hsl(47, 88%, 63%);
+    --clr-gray-950: hsl(0, 0%, 7%);
+    --clr-gray-500: hsl(0, 0%, 42%);
+    --clr-white: #fff;
+    /* fonts */
+    --ff-figtree: 'FigTree', system-ui, sans-serif;
+    /* font sizes*/
+    --fs-2xl: 1.5rem;
+    --fs-xl: 1.25rem;
+    --fs-lg: 1rem;
+    --fs-md: .875rem;
+    --fs-sm: .75rem;
+    /* font weight */
+    --fw-medium: 500;
+    --fw-extra-bold: 900;
+}
+
+.card {
+    padding: 1rem 2rem;
+    border: 2px solid black;
+    border-radius: .2rem;
+    box-shadow: 10px 10px black;
+    background-color: var(--clr-white);
+    @media (max-width: 600px) {
+        margin-inline: 50px;
+    }
+    & .cardphoto {
+        border-radius: .625rem;
+    }
+    & .sectioncontent-items h2 {
+        font-size: var(--fs-2xl);
+    }
+    & .sectioncontent-items p {
+        font-size: var(--fs-md);
+    }
+    & .sectioncontent-button,
+    a {
+        font-weight: var(--fw-extra-bold);
+        padding: .2rem;
+        display: inline-block;
+        border-radius: .625rem;
+        text-decoration: none;
+        background-color: var(--clr-yellow);
+        margin-block: .5rem;
+        color: var(--clr-gray-950);
+    }
+    & .userinfo {
+        gap: .75rem;
+        display: flex;
+        align-items: center;
+        & .userphoto {
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+}
