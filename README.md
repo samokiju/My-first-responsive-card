@@ -53,9 +53,13 @@ Update variables in style.css to match your branding:
 }
 
 📸 Preview
+
 Desktop
+
 <img width="1892" height="936" alt="card-desktop" src="https://github.com/user-attachments/assets/c9010b5e-6fd0-43a8-9f51-68d4e290c1a4" />
+
 Mobile
+
 <img width="518" height="867" alt="card-mobile" src="https://github.com/user-attachments/assets/60f985b5-56f2-402d-b67f-3f8b84b78f9d" />
 
 
